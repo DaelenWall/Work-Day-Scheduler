@@ -23,4 +23,13 @@ $('.time-block').each(function () {
   }
   liveTime();
 // -------------------------------------------------------------------------------------//
+
+  // Checking currentTime and updating the color of time-block accordingly
+  if (hour < currentTime) {
+    $(this).addClass('past');
+  } else if (hour > currentTime) {
+    $(this).addClass('future');
+  } else {
+    $(this).addClass('present');
+  }
 });
